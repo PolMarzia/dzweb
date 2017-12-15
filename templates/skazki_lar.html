@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+  <head>
+    <title>Главная</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	
+	  
+  </head>
+  <body>
+	<nav>
+		<ul>
+			<li><a href="{% url 'index' %}">Главная</a></li>
+			<li class="drop">
+				<a href="#">Сказки</a>
+				<div class="dropdownContain">
+				  <div class="dropOut">
+						<div class="triangle"></div>
+						<ul>
+							<li>Сказки бабушки Ларисы</li>
+							<li>Сказки юных дарований</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li><a href="#">Детские рисунки</a></li>
+		</ul>
+  </nav>
+
+    <div class="container">
+        <div class="row">
+            <div><a href="https://drive.google.com/file/d/1w_Pbups908hAaS7ezwNz4VeCP0SrX0hy/view">Ткни на меня и попадешь на книжечку</a></iframe></div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <p id="footer-text"> &copy; Copyright by Anastasia Gurina</p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

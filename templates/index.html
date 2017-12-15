@@ -1,0 +1,81 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+  <head>
+    <title>Главная</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	
+	  
+  </head>
+  <body>
+	<nav>
+		<ul>
+			<li><a href="{% url 'index' %}">Главная</a></li>
+			<li class="drop">
+				<a href="#">Сказки</a>
+				<div class="dropdownContain">
+				  <div class="dropOut">
+						<div class="triangle"></div>
+						<ul>
+							<li><a href="{% url 'skazki_lar' %}">Сказки бабушки Ларисы </a></li>
+							<li>Сказки юных дарований</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li><a href="#">Детские рисунки</a></li>
+		</ul>
+</nav>
+
+      <div class="container-fluid">
+		  <div class="row">
+              <div class="col-lg-2"></div> {#Костыль, который сдвигает блок (потом исправлю)#}
+                  <div class="col-lg-8" id="name">
+                      <b>Сказки юных дарований и бабушки Ларисы</b>
+                  </div>
+		  </div>
+	  </div>
+
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div> {# Еще костыль, тож сдвигает столбец. #}
+                <div class="col-lg-2" id="row-left">
+                   <div class="cont" id="img1">
+                        <img src="{% static 'img/mainpage1.jpg' %}" class="img-rounded" width="100%" >
+                    </div>
+                </div>
+                <div class="col-lg-4" id="forcentrcol">
+                    <div class="cont">
+                        <p class="textpriv">Темы и образы сказки издавна привлекали меня. Впечатления и переживания детства,связанные со сказками, оставили нерушимый след в моём сознании. </br>
+
+    У меня три высших образования. Много лет я проработала воспитательницей в детском саду, экскурсоводом в школьно-молодёжной секции Московского городского бюро экскурсий. Участвовала в разработке, создании и проведении тематических экскурсий для детей.
+    </br>
+    В свободное время я люблю путешествовать вместе со своими внучками, с которыми во время путешествий происходит много удивительных и невероятных событий. Об этих невероятных событиях я и рассказываю в своих книжках.
+    </br>
+    Растут внучки, взрослеют и сказки.</p>
+                    </div>
+                </div>
+               <div class="col-lg-2" id="row-right">
+                    <div class="cont" id="img2">
+                       <img src="{% static 'img/mainpage2.jpg' %}" class="img-rounded" width="100%">
+                    </div>
+                </div>
+            </div>
+     </div>
+
+<div id="footer">
+    <p id="footer-text"> &copy; Copyright by Anastasia Gurina</p>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
