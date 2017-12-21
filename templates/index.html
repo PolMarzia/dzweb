@@ -24,12 +24,12 @@
 						<div class="triangle"></div>
 						<ul>
 							<li><a href="{% url 'skazki_lar' %}">Сказки бабушки Ларисы </a></li>
-							<li>Сказки юных дарований</li>
+							<li><a href="{% url 'skazki_dar' %}">Сказки юных дарований</a></li>
 						</ul>
 					</div>
 				</div>
 			</li>
-			<li><a href="#">Детские рисунки</a></li>
+			<li><<a href="{% url 'risunki' %}">Детские рисунки</a></li>
 		</ul>
 </nav>
 
@@ -63,7 +63,7 @@
                 </div>
                <div class="col-lg-2" id="row-right">
                     <div class="cont" id="img2">
-                       <img src="{% static 'img/mainpage2.jpg' %}" class="img-rounded" width="100%">
+                       <img src="{% static 'img/mainpage2.jpg' %}" class="img-ro unded" width="100%">
                     </div>
                 </div>
             </div>

@@ -6,3 +6,9 @@ def mainpage(request):
 
 def skazki(request):
     return render(request, "skazki_lar.html", locals())
+
+def skazki_dar(request):
+    return render(request, "skazki_dar.html", locals())
+
+def risunki(request):
+        return render(request, "risunki.html", locals())
