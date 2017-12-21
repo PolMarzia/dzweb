@@ -14,3 +14,14 @@ class skazka_dar(models.Model):
         verbose_name = "Сказка"
         verbose_name_plural = "Сказки"
 
+class risunki(models.Model):
+    id_risunok=models.AutoField(primary_key=True)
+    name=models.CharField(max_length=100)
+    image=models.ImageField(upload_to='static/img/risunki')
+    author=models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name="Рисунок"
+        verbose_name_plural="Рисунки"
