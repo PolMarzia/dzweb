@@ -30,20 +30,24 @@ def change_skazka(request, id_skazka):
     skazka = skazka_dar.objects.get(id_skazka=id_skazka)
     form = skazka_form(instance=skazka)
     if request.method == "POST":
-        form = skazka_form(request.POST, request.FILES, instance=skazka)
-        if form.is_valid():
-            form.save()
-            return redirect("admin_page_skazki")
+        if 'good' in request.POST.keys() and request.POST['good']:
+            form = skazka_form(request.POST, request.FILES, instance=skazka)
+            if form.is_valid():
+                form.save()
+                return redirect("admin_page_skazki")
+            else:
+                return redirect("change_skazka")
         else:
-            return redirect("change_skazka")
+            return redirect("admin_page_skazki")
     return render(request, "admin/change_skazka.html", locals())
+
 
 def delete_skazka(request, id_skazka):
     skazka = skazka_dar.objects.get(id_skazka=id_skazka)
     if request.method == "POST":
-       # if 'yes' in request.POST.keys() and request.POST['yes']:
-        skazka.delete()
-        return redirect("admin_page_skazki")
-    else:
-        return redirect("admin_page_skazki")
-    return render(request, "admin/admin_page.html", locals())
+        if 'yes' in request.POST.keys() and request.POST['yes']:
+            skazka.delete()
+            return redirect("admin_page_skazki")
+        else:
+            return redirect("admin_page_skazki")
+    return render(request, "admin/delete_skazka.html", locals())

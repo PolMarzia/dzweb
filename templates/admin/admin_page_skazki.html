@@ -31,7 +31,7 @@
                       <th scope="row">{{ skazka.id_skazka }}</th>
                       <td>{{ skazka.name }}</td>
                       <td><button type="button" class="btn btn-info"><a href="{% url "change_skazka" skazka.id_skazka %}">Изменить</a></button></td>
-                      <td><button type="button" class="btn btn-info"><a href="{% url "delete_skazka" skazka.id_skazka %}">Удалить</a></button></td>
+                      <td><button type="button" class="btn btn-warning"><a href="{% url "delete_skazka" skazka.id_skazka %}">Удалить</a></button></td>
                     </tr>
               {% endfor %}
               </tbody>
