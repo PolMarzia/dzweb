@@ -14,7 +14,21 @@
 
   </head>
   <body>
-
+<section class="admin-add-usl">
+    <div class="add-usl-titl text-center">
+        <h1>Добавить новую сказку</h1>
+    </div>
+    <form enctype="multipart/form-data"  action="" method="POST">
+        {% csrf_token %}
+        <table style = "border: 1px solid black;" cellpadding="5" cellspacing="20">
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Добавить" name="add">
+    </form>
+    <div>
+        <a href="{% url "admin_page_skazki" %}" class = "grn-btn">Назад</a>
+    </div>
+</section>
   <div id="footer">
     <p id="footer-text"> &copy; Copyright by Anastasia Gurina</p>
   </div>

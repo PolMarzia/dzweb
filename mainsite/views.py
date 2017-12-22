@@ -24,7 +24,16 @@ def admin_page_skazki(request):
     return render(request, "admin/admin_page_skazki.html", locals())
 
 def add_skazka(request):
-    return render(request, "admin/admin_page.html", locals())
+    form = skazka_form()
+    if request.method == "POST":
+        if 'add' in request.POST.keys() and request.POST['add']:
+            form = skazka_form(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                return redirect('admin_page_skazki')
+        else:
+            return redirect('admin_page_skazki')
+    return render(request, "admin/add_skazka.html", locals())
 
 def change_skazka(request, id_skazka):
     skazka = skazka_dar.objects.get(id_skazka=id_skazka)
