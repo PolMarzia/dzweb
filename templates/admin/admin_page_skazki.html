@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Главная</title>
+    <title>Панель администратора</title>
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,31 +14,32 @@
 
   </head>
   <body>
-  <button type="button" class="btn btn-danger"><a href="{% url "add_skazka" %}">Изменить</a></button>
-  <div class="container">
-      <div class="row">
-          <table class="table table-hover">
-              <thead>
-            <tr>
-                <th>#</th>
-                <th>Название рисунка</th>
-                <th>Изменить</th>
-                <th>Удалить</th>
-            </tr>
-              </thead>
-              <tbody>
-                {% for skazka in skazka_list %}
-                    <tr>
-                      <th scope="row">{{ skazka.id_skazka }}</th>
-                      <td>{{ skazka.name }}</td>
-                      <td><button type="button" class="btn btn-info"><a href="{% url "change_skazka" skazka.id_skazka %}">Изменить</a></button></td>
-                      <td><button type="button" class="btn btn-warning"><a href="{% url "delete_skazka" skazka.id_skazka %}">Удалить</a></button></td>
-                    </tr>
-              {% endfor %}
-              </tbody>
-          </table>
+  <div class="admin_pan">
+      <div class="container">
+          <div class="row">
+              <table class="table table-hover" style="background: rgba(217, 196, 239, 0.85);">
+                  <thead style="background: #F8BEDF">
+                <tr>
+                    <th width="60%">Название рисунка</th>
+                    <th>Изменить</th>
+                    <th>Удалить</th>
+                </tr>
+                  </thead>
+                  <tbody>
+                    {% for skazka in skazka_list %}
+                        <tr>
+                          <td>{{ skazka.name }}</td>
+                          <td><button type="button" class="btn" style="background: #BBECBC"><a href="{% url "change_skazka" skazka.id_skazka %}" class="adm">Изменить</a></button></td>
+                          <td><button type="button" class="btn" style="background: #FF6054" ><a href="{% url "delete_skazka" skazka.id_skazka %}" class="adm">Удалить</a></button></td>
+                        </tr>
+                  {% endfor %}
+                  </tbody>
+              </table>
+          </div>
+          <button type="button" class="btn" style="background: #D3F3EC;"><a href="{% url "add_skazka" %}" class="adm">Добавить</a></button>
       </div>
   </div>
+
   <div id="footer">
     <p id="footer-text"> &copy; Copyright by Anastasia Gurina</p>
   </div>

@@ -131,6 +131,18 @@ a:visited {
    }
 
 
+a.adm, a.adm:visited, a.adm:hover{
+	text-decoration: none;
+	color: black;
+}
+
+.admin_pan{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin: 50px;
+	font-size: 23px;
+}
 /*----------------Content-------------------*/
 #name{
 	font-size: 48px;
@@ -168,6 +180,37 @@ a:visited {
 	align-content: center;
 }
 
+.img1,.img2{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.admin_pan{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-for-skazka{
+	background: rgba(217, 196, 239, 0.85);
+	font-size: 20px;
+}
+
+.form-div-skazka{
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+.button-form{
+	width: 49.5%;
+}
+
+
 /*----------------Footer---------------*/
 #footer {
 	position: fixed; /* Фиксированное положение футера (подвала)*/
@@ -185,4 +228,5 @@ a:visited {
 	color: #B286E0;
 	opacity: 0.9;
 }
+
 

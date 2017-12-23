@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Главная</title>
+    <title>Изменить сказку</title>
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,14 +14,21 @@
 
   </head>
   <body>
-   <form enctype="multipart/form-data"  action="" method="POST">
-        {% csrf_token %}
-        <table style = "border: 1px solid black;" cellpadding="5" cellspacing="20">
-            {{ form.as_table }}
-        </table>
-        <input type="submit" value="Изменить" name="good">
-        <input type="submit" value="Назад" name="back">
-    </form>
+
+      <div class="form-div-skazka"> {# НАСТЯ, ХВАТИТ КОСТЫЛЬНИЧАТЬ!!! #}
+
+               <form enctype="multipart/form-data"  action="" method="POST" class="form-for-skazka">
+                    {% csrf_token %}
+                    <table style = "border: 1px solid black;" cellpadding="5" cellspacing="20" style="background: rgba(217, 196, 239, 0.85);">
+                        {{ form.as_table }}
+                    </table>
+                    <div>
+                        <input type="submit" value="Изменить" name="good" class="btn button-form" >
+                        <input type="submit" value="Назад" name="back" class="btn button-form">
+                    </div>
+                </form>
+      </div>
+
 
   <div id="footer">
     <p id="footer-text"> &copy; Copyright by Anastasia Gurina</p>

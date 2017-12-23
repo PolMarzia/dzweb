@@ -35,6 +35,7 @@ def add_skazka(request):
             return redirect('admin_page_skazki')
     return render(request, "admin/add_skazka.html", locals())
 
+
 def change_skazka(request, id_skazka):
     skazka = skazka_dar.objects.get(id_skazka=id_skazka)
     form = skazka_form(instance=skazka)
