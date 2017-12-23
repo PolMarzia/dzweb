@@ -31,6 +31,8 @@ def add_skazka(request):
             if form.is_valid():
                 form.save()
                 return redirect('admin_page_skazki')
+            else:
+                return redirect('add_skazka')
         else:
             return redirect('admin_page_skazki')
     return render(request, "admin/add_skazka.html", locals())

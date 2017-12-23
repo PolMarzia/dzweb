@@ -16,13 +16,15 @@
   <body>
 <section class="admin-add-usl">
     <div class="form-div-skazka">
-        <form enctype="multipart/form-data"  action="" method="POST">
+        <form enctype="multipart/form-data"  action="" method="POST" class="form-for-skazka">
             {% csrf_token %}
             <table style = "border: 1px solid black;" cellpadding="5" cellspacing="20">
                 {{ form.as_table }}
             </table>
-            <input type="submit" value="Добавить" name="add"  class="btn button-form">
-            <input type="submit" value="Назад" name="back" class="btn button-form" >
+            <div>
+                <input type="submit" value="Добавить" name="add" class="btn button-form">
+                <button class="btn button-form"><a href="{% url "admin_page_skazki" %}" class="adm">Назад</a></button>
+            </div>
         </form>
    </div>
 
