@@ -175,10 +175,11 @@ a.adm, a.adm:visited, a.adm:hover{
 
 
 .textpriv{
-	font-size: 20px;
+	font-size: 25px;
 	text-align: center;
 	align-content: center;
 }
+
 
 .img1,.img2{
 	display: flex;
@@ -207,9 +208,13 @@ a.adm, a.adm:visited, a.adm:hover{
 }
 
 .button-form{
-	width: 49.8%;
+	width: 49.5%;
+	display: inline-block;
 }
 
+.skazki_darcont{
+	margin: 30px;
+}
 
 /*----------------Footer---------------*/
 #footer {

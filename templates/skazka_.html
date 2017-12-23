@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Добавить сказку</title>
+    <title>Сказка</title>
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,23 +14,42 @@
 
   </head>
   <body>
-    <div class="form-div-skazka">
-        <form enctype="multipart/form-data"  action="" method="POST" class="form-for-skazka">
-            {% csrf_token %}
-            <table style = "border: 1px solid black;" cellpadding="5" cellspacing="20">
-                {{ form.as_table }}
-            </table>
-            <div class="row">
-                <input type="submit" value="Добавить" name="add" class="btn button-form">
-                <button class="btn button-form"><a href="{% url "admin_page_skazki" %}" class="adm">Назад</a></button>
+	<nav>
+		<ul>
+			<li><a href="{% url 'index' %}">Главная</a></li>
+			<li class="drop">
+				<a href="#">Сказки</a>
+				<div class="dropdownContain">
+				  <div class="dropOut">
+						<div class="triangle"></div>
+						<ul>
+							<li><a href="{% url 'skazki_lar' %}">Сказки бабушки Ларисы </a></li>
+							<li><a href="{% url 'skazki_dar' %}">Сказки юных дарований</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li><<a href="{% url 'risunki' %}">Детские рисунки</a></li>
+		</ul>
+</nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+
             </div>
-        </form>
-   </div>
+            <div class="col-lg-8">
+                {% csrf_token %}
+
+            </div>
+        </div>
+    </div>
 
 
-  <div id="footer">
+<div id="footer">
     <p id="footer-text"> &copy; Copyright by Anastasia Gurina</p>
-  </div>
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

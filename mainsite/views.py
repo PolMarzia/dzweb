@@ -11,6 +11,7 @@ def skazki(request):
     return render(request, "skazki_lar.html", locals())
 
 def skazki_dar(request):
+    skazka_list = skazka_dar.objects.all()
     return render(request, "skazki_dar.html", locals())
 
 def risunki(request):
@@ -63,3 +64,7 @@ def delete_skazka(request, id_skazka):
         else:
             return redirect("admin_page_skazki")
     return render(request, "admin/delete_skazka.html", locals())
+
+def skazka_(request, id_skazka):
+    skazka = skazka_dar.objects.get(id_skazka=id_skazka)
+    return render(request, "skazka_.html", locals())

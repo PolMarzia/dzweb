@@ -14,14 +14,16 @@
 
   </head>
   <body>
-  <form action="#" method="POST">
-    <div class="form-div-skazka">
-        {% csrf_token %}
-        <p>Вы действительно хотите удалить сказку? "{{ skazka.name }}"</p>
-        <input type="submit" value="Да" name="yes"  class="btn button-form">
-        <input type="submit" value="Нет" name="no"  class="btn button-form">
-    </div>
-  </form>
+  <div class="form-div-skazka">
+      <form action="#" method="POST" class="form-for-skazka" style="border: 1px solid black">
+          {% csrf_token %}
+          <p style="font-size:30px">Вы действительно хотите удалить сказку? "{{ skazka.name }}"</p>
+          <div>
+              <input type="submit" value="Да" name="yes"  class="btn button-form">
+              <input type="submit" value="Нет" name="no"  class="btn button-form">
+          </div>
+      </form>
+  </div>
   <div id="footer">
     <p id="footer-text"> &copy; Copyright by Anastasia Gurina</p>
   </div>

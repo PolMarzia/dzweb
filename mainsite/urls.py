@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^admin_page/$', views.admin_page, name='admin_page'),
     url(r'^admin_page_skazki/$', views.admin_page_skazki, name='admin_page_skazki'),
     url(r'^add_skazka/$', views.add_skazka, name='add_skazka'),
-    url(r'^delete_skazka/(?P<id_skazka>\d+)$$', views.delete_skazka, name='delete_skazka'),
+    url(r'^delete_skazka/(?P<id_skazka>\d+)$', views.delete_skazka, name='delete_skazka'),
     url(r'^change_skazka/(?P<id_skazka>\d+)$', views.change_skazka, name="change_skazka"),
+    url(r'^skazka_/(?P<id_skazka>\d+)$', views.skazka_, name='skazka_')
 ]

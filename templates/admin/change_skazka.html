@@ -14,20 +14,18 @@
 
   </head>
   <body>
-
-      <div class="form-div-skazka"> {# НАСТЯ, ХВАТИТ КОСТЫЛЬНИЧАТЬ!!! #}
-
-               <form enctype="multipart/form-data"  action="" method="POST" class="form-for-skazka">
-                    {% csrf_token %}
-                    <table style = "border: 1px solid black;" cellpadding="5" cellspacing="20" style="background: rgba(217, 196, 239, 0.85);">
-                        {{ form.as_table }}
-                    </table>
-                    <div>
-                        <input type="submit" value="Изменить" name="good" class="btn button-form" >
-                        <input type="submit" value="Назад" name="back" class="btn button-form">
-                    </div>
-                </form>
-      </div>
+    <div class="form-div-skazka"> {# НАСТЯ, ХВАТИТ КОСТЫЛЬНИЧАТЬ!!! #}
+         <form enctype="multipart/form-data"  action="" method="POST" class="form-for-skazka">
+                {% csrf_token %}
+                <table style = "border: 1px solid black;" cellpadding="5" cellspacing="20" style="background: rgba(217, 196, 239, 0.85);">
+                    {{ form.as_table }}
+                </table>
+                <div>
+                    <input type="submit" value="Изменить" name="good" class="btn button-form" >
+                    <input type="submit" value="Назад" name="back" class="btn button-form">
+                </div>
+          </form>
+    </div>
 
 
   <div id="footer">
