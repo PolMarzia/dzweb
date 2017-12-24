@@ -45,7 +45,7 @@
                   <tbody>
                     {% for skazka in skazka_list %}
                         <tr>
-                          <td>{{ skazka.name }}</td>
+                          <td><a href="{% url "skazka_" skazka.id_skazka %}" class="adm">{{ skazka.name }}</a></td>
                         </tr>
                   {% endfor %}
                   </tbody>
